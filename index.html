@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ED'SGARDENER | Roblox Codes Hub</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0f172a;
+color:white;
+}
+
+/* HEADER */
+
+header{
+background:#020617;
+border-bottom:2px solid #22c55e;
+padding:20px;
+text-align:center;
+}
+
+header h1{
+margin:0;
+color:#22c55e;
+}
+
+/* SEARCH */
+
+.search{
+text-align:center;
+padding:20px;
+}
+
+.search input{
+width:80%;
+max-width:500px;
+padding:12px;
+border-radius:6px;
+border:none;
+font-size:16px;
+}
+
+/* MAIN */
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+/* GAME CARD */
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+.card h2{
+margin-top:0;
+color:#22c55e;
+}
+
+/* CODE BOX */
+
+.code{
+background:#020617;
+border:1px solid #22c55e;
+padding:10px;
+margin:10px 0;
+border-radius:6px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+button{
+background:#22c55e;
+border:none;
+padding:6px 12px;
+border-radius:5px;
+cursor:pointer;
+color:black;
+font-weight:bold;
+}
+
+button:hover{
+background:#4ade80;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+margin-top:30px;
+background:#020617;
+color:#94a3b8;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🌱 ED'SGARDENER Roblox Codes</h1>
+<p>Working codes for popular Roblox games</p>
+</header>
+
+<div class="search">
+<input type="text" id="search" placeholder="Search game..." onkeyup="searchGame()">
+</div>
+
+<div class="container" id="games">
+
+<div class="card">
+<h2>Garden Horizons</h2>
+<p>Updated: March 2026</p>
+
+<div class="code">
+<span>FREESEEDS</span>
+<button onclick="copyCode('FREESEEDS')">Copy</button>
+</div>
+
+<div class="code">
+<span>SPRING2026</span>
+<button onclick="copyCode('SPRING2026')">Copy</button>
+</div>
+
+<div class="code">
+<span>GARDENBOOST</span>
+<button onclick="copyCode('GARDENBOOST')">Copy</button>
+</div>
+
+</div>
+
+<div class="card">
+<h2>Blox Fruits</h2>
+
+<div class="code">
+<span>SUB2GAMERROBOT</span>
+<button onclick="copyCode('SUB2GAMERROBOT')">Copy</button>
+</div>
+
+<div class="code">
+<span>ENYU_IS_PRO</span>
+<button onclick="copyCode('ENYU_IS_PRO')">Copy</button>
+</div>
+
+</div>
+
+<div class="card">
+<h2>Sailor Piece</h2>
+
+<div class="code">
+<span>SAILORBOOST</span>
+<button onclick="copyCode('SAILORBOOST')">Copy</button>
+</div>
+
+<div class="code">
+<span>ANIMEPOWER</span>
+<button onclick="copyCode('ANIMEPOWER')">Copy</button>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+Created by ED'SGARDENER
+</footer>
+
+<script>
+
+function copyCode(code){
+navigator.clipboard.writeText(code);
+alert("Copied: " + code);
+}
+
+function searchGame(){
+let input=document.getElementById("search").value.toLowerCase();
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+let title=card.querySelector("h2").innerText.toLowerCase();
+
+if(title.includes(input)){
+card.style.display="block";
+}else{
+card.style.display="none";
+}
+});
+}
+
+</script>
+
+</body>
+</html>
